@@ -4,10 +4,12 @@ public:
         int n=nums.size();
         vector<int>ans;
         bool found1=false;
+        int j=0;
         for(int i=0;i<n;i++){
             if(nums[i]==target){
                 found1=true;
                 ans.push_back(i);
+                j=i;
                 break;
             }
 
@@ -16,7 +18,7 @@ public:
         }
         
         
-        for(int i=n-1;i>=0;i--){
+        for(int i=n-1;i>=j;i--){
             if(nums[i]==target){
 
                 ans.push_back(i);
